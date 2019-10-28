@@ -1,0 +1,74 @@
+server:
+  port: 7070
+spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+---
+formapp:
+  messages:
+    success: Registration successful....
+    failed: Registration failed.......
+    update: Record updated successfully
+    
+
+spring:
+  mvc:
+    view:
+      prefix: /views/ 
+      suffix: .jsp
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: asifraza4101995@gmail.com
+    password: asifraza@786
+    properties:
+      mail:
+       smtp:
+        auth: true
+        starttls:
+         enable: true
+   
+  datasource:
+    #SPRING_DATASOURCE_URL environment variable will be something like -> jdbc:sqlserver://MySqlServer\\MyInstance:1433;DatabaseName=MyDbName;
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: scott
+    password: tiger
+    driverClassName: oracle.jdbc.driver.OracleDriver
+ 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      dialect:  org.hibernate.dialect.Oracle10gDialect
+    
+      
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+  endpoint:
+    env:
+      enabled: true
+    info:
+      enabled: true
+    beans:
+      enabled: true
+    health:
+      enabled: true
+    metrics:
+      enabled: true
+    threaddump:
+      enabled: true
+    heapdump:
+      enabled: true
+    configprops:
+      enabled: true
+      
+
