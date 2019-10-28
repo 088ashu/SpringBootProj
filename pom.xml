@@ -17,6 +17,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<start-class>pringBootProj3Application</start-class>
 	</properties>
 
 	<dependencies>
