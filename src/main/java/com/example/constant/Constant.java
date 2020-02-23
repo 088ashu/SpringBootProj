@@ -2,6 +2,8 @@ package com.example.constant;
 
 public class Constant {
 	public static final String MODEL_KEY = "user";
+	
+	public static final String MODEL_KEY1 = "user1";
 
 	public static final String MODEL_KEY1 = "user1";
 
